@@ -8,6 +8,15 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
+    "homepage": "https://meimechin-git.github.io/react-todo-app/",
+    "scripts": {
+      "dev": "vite",
+      "build": "tsc -b && vite build",
+      "lint": "eslint .",
+      "preview": "vite preview",
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d dist"
+    },
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
