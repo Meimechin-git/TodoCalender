@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": " https://meimechin-git.github.io/TodoCalender/",
+  "homepage": "https://meimechin-git.github.io/TodoCalender/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
