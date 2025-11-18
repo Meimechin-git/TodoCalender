@@ -10,8 +10,6 @@ React、TypeScript、Tailwind CSS を使用して Todoリストとカレンダ�
 <img src="/image/image0.png" width="500px">  
 
 
-
-  
 上の画像のようにTodoCalenderには3つの見出しがある。
 
   
@@ -20,8 +18,6 @@ React、TypeScript、Tailwind CSS を使用して Todoリストとカレンダ�
 - ALL TODOLIST: すべてのTodoListを優先度順に確認できる。
 
   
-
-
 -----
 <img src="/image/image1.png" width="500px">  
 
@@ -61,3 +57,7 @@ ALL TODOLISTでは、すべてのタスクを優先度順にみることがで�
 ## 開発履歴
 
 - 2025年10月23日：プロジェクト開始
+- 2025年11月18日：プロジェクト完了日
+
+
+- 取り組み時間：約25時間
