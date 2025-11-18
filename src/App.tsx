@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { type Todo } from "./types";
 import TodoList from "./TodoList";
 import CalendarView from "./CalendarView";
@@ -17,6 +17,37 @@ const App = () => {
   const [newTodoDeadline, setNewTodoDeadline] = useState<Date | null>(null);
   const [newTodoNameError, setNewTodoNameError] = useState("");
   const [newTodoColor, setNewTodoColor] = useState("red");
+
+  const [initialized, setInitialized] = useState(false); // ◀◀ 追加
+  const localStorageKey = "TodoApp"; // ◀◀ 追加
+
+  // App コンポーネントの初回実行時のみLocalStorageからTodoデータを復元
+  useEffect(() => {
+    const todoJsonStr = localStorage.getItem(localStorageKey);
+    if (todoJsonStr && todoJsonStr !== "[]") {
+      const storedTodos: Todo[] = JSON.parse(todoJsonStr);
+      const convertedTodos = storedTodos.map((todo) => ({
+        ...todo,
+        deadline: todo.deadline ? new Date(todo.deadline) : null,
+      }));
+      setTodos(convertedTodos);
+    } else {
+      setTodos([]);
+    }
+    setInitialized(true);
+  }, []);
+
+  // 状態 todos または initialized に変更があったときTodoデータを保存
+  useEffect(() => {
+    if (initialized) {
+      localStorage.setItem(localStorageKey, JSON.stringify(todos));
+    }
+  }, [todos, initialized]);
+
+  // const uncompletedCount = todos.filter(
+  //   (todo: Todo) => !todo.isDone
+  // ).length;
+
 
   // const uncompletedCount = todos.filter((todo: Todo) => !todo.isDone).length;
   const COLOR_OPTIONS = [
