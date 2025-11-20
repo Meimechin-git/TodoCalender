@@ -5,6 +5,7 @@
 React、TypeScript、Tailwind CSS を使用して Todoリストとカレンダー機能を統合したウェブアプリケーションである。  
 
 
+ページ⤵  
 <a src = https://meimechin-git.github.io/TodoCalender/>https://meimechin-git.github.io/TodoCalender/</a>
 
 
@@ -59,8 +60,8 @@ ALL TODOLISTでは、すべてのタスクを優先度順にみることがで�
 
 ## 開発履歴
 
-- 2025年10月23日：プロジェクト開始
-- 2025年11月18日：プロジェクト完了日
+- プロジェクト開始：2025年10月23日
+- プロジェクト完了日：2025年11月18日
 
 
 - 取り組み時間：約25時間
